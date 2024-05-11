@@ -15,9 +15,12 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -47,6 +50,186 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/*
+  displays
+*/
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+/* 
+* Height
+*/
+.h-screen {
+  height: 100vh;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* 
+*  width
+*/
+.w-screen {
+  width: 100vw;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.movie__content {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.movie__content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: right;
+  transition: background-image 0.5s ease-in;
+  overflow: hidden;
+}
+
+.movie__content-section {
+  position: absolute;
+}
+
+.movie__content-footer {
+  background-color: #15161A;
+  height: 25%;
+}
+
+.movie__content-topbar {
+  flex: 1;
+  background: linear-gradient(to top, rgb(0, 0, 0) 10%, transparent 50%, rgb(0, 0, 0) 100%);
+}
+
+.movie__content-header {
+  padding: 90px;
+}
+
+.movie__content-header--title {
+  font-size: 62px;
+  font-weight: 700;
+}
+
+.movie__content-header--subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 2;
+  color: #dedede;
+}
+
+.movie__content-aside {
+  width: 35%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 10%, transparent 50%, rgba(0, 0, 0, 0.9) 80%);
+}
+
+.content-aside-top {
+  padding: 40px;
+}
+.content-aside-top .aside__top--image {
+  cursor: pointer;
+}
+
+.content__aside-season-area {
+  height: 40px;
+  width: 100%;
+  max-width: 90%;
+  position: relative;
+}
+.content__aside-season-area .aside__season-border {
+  width: 100%;
+  height: 1px;
+  background: #7C8184;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.content-aside-bottom {
+  flex: 1;
+  padding: 0px 30px;
+}
+.content-aside-bottom .aside__bottom-area {
+  padding: 0px 10px 25px;
+  cursor: pointer;
+  margin-right: 15px;
+  z-index: 2;
+}
+.content-aside-bottom .aside__bottom-area.focused {
+  border-bottom: 2px solid #19af4f;
+}
+.content-aside-bottom .aside__bottom_season-number {
+  font-size: 20px;
+  color: #ccc;
+  font-weight: 500;
+  user-select: none;
+  transition: color 0.4s linear;
+}
+.content-aside-bottom .aside__bottom_season-number:hover {
+  color: #fff;
+}
+
+.content__aside-episode {
+  flex: 1;
+  padding: 0px 0px 20px 0px;
+}
+
+.aside__episode--item {
+  max-width: 90%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-bottom: 0.5px solid #898D90;
+  cursor: pointer;
+  transition: color 0.5s linear;
+}
+
+.aside__episode--item:hover .episode__title {
+  color: #19af4f;
+}
+
+.episode__title {
+  font-size: 20px;
+  font-weight: 600;
+  user-select: none;
 }
 
 /*# sourceMappingURL=index.css.map */
