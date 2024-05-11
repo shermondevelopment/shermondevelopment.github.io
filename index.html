@@ -12,7 +12,7 @@
 <body>
 
  <main class="h-screen w-screen movie__content">
-    <section class="h-screen w-screen movie__content-section flex flex-col">
+    <section class="h-screen w-screen movie__content-section flex flex-col justify-between">
         <section class="movie__content-topbar flex justify-between">
             <header class="movie__content-header">
                 <h1 class="movie__content-header--title">Penny Dreadful</h1>
@@ -88,8 +88,30 @@
              </div>
             </aside>
         </section>
-        <footer class="w-full movie__content-footer">
-            shermon
+        <footer class="w-full movie__content-footer flex justify-center ">
+            <div class="footer__content">
+              <div class="footer__content-info flex justify-between items-center">
+                <div class="flex">
+                    <div class="footer__content--tabitem focused">
+                        <h2 class="tabitem__footer-title">
+                            GENERAL
+                        </h2>
+                    </div>
+                    <div class="footer__content--tabitem">
+                        <h2 class="tabitem__footer-title">
+                            ELENCO
+                        </h2>
+                    </div>
+                    <div class="footer__content--tabitem">
+                        <h2 class="tabitem__footer-title">
+                            PRINCIPALES PREMIOS
+                        </h2>
+                    </div>
+                </div>
+                <img src="./assets/icons/logo-telecine.svg" />
+                <div class="footer__border"></div>
+              </div>
+            </div>
         </footer>
     </section>
  </main>
