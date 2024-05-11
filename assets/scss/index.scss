@@ -11,18 +11,13 @@
     overflow: hidden;
 }
 
-.movie__content-section {
-    // background: linear-gradient(to top, red 10%, transparent 50%, red 100%);
-    position: absolute;
-}
 
 .movie__content-footer {
     background-color: #15161A;
-    height: 25%;
+    height: 400px;
 }
 
 .movie__content-topbar {
-    flex: 1;
     background: linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent 50%, rgba(0, 0, 0, 1) 100%);
 }
 
@@ -74,6 +69,7 @@
 .content-aside-bottom {
     flex: 1;
     padding: 0px 30px;
+    max-height: 100%;
 
     .aside__bottom-area {
         padding: 0px 10px 25px;
@@ -101,6 +97,8 @@
 .content__aside-episode {
     flex: 1;
     padding: 0px 0px 20px 0px;
+    overflow-y: auto;
+    height: 100%;
 }
 
 .aside__episode--item {
