@@ -1,13 +1,13 @@
 class Menu { 
 
-    constructor() {
-        this.menuOptions = document.querySelectorAll('.aside__bottom-area')
+    constructor(identifyElement) {
+        this.menuOptions = document.querySelectorAll(identifyElement)
         this.seasonCehcked = '1'
         this.init()
     }
 
     /*
-    * add click event to all menu options
+    * add click event to all menu options aside
     */
     addFocusedItemMenu() {
         this.menuOptions.forEach((itemMenu) => {

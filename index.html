@@ -88,8 +88,8 @@
              </div>
             </aside>
         </section>
-        <footer class="w-full movie__content-footer flex justify-center ">
-            <div class="footer__content">
+        <footer class="w-full movie__content-footer flex justify-center flex-col items-center">
+            <div class="footer__content flex flex-col">
               <div class="footer__content-info flex justify-between items-center">
                 <div class="flex">
                     <div class="footer__content--tabitem focused">
@@ -108,9 +108,37 @@
                         </h2>
                     </div>
                 </div>
-                <img src="./assets/icons/logo-telecine.svg" />
+                <img src="./assets/icons/logo-telecine.svg" style="margin-bottom: 10" />
                 <div class="footer__border"></div>
               </div>
+            </div>
+            <div class="flex content__general">
+                <div class="flex w-full mt-20">
+                   <div class="flex justify-center">
+                        <div class="flex flex-col items-center justify-center content__emoji">
+                            <img src="./assets/icons/add-gray-s.svg" class="emoji__footer" width="35" />
+                            <span>Mi lista</span>
+                        </div>
+                        <div class="flex flex-col items-center content__emoji">
+                            <img src="./assets/icons/sad-gray-w.svg" class="emoji__footer" width="35" />
+                            <span>Evaluar</span>
+                        </div>
+                        <div class="flex flex-col items-center content__emoji"">
+                            <img src="./assets/icons/rec-gray-s.svg" class="emoji__footer" width="35" />
+                            <span>Grabar</span>
+                        </div>
+                        <div class="flex flex-col items-center content__emoji"">
+                            <img src="./assets/icons/share-gray-s.svg" class="emoji__footer" width="35" />
+                            <span>Compartir</span>
+                        </div>
+                   </div>
+                   <div class="flex flex-col justify-center footer__sinopse w-full">
+                      <h3 class="footer__sinopse-title">SINOPSE</h3>
+                      <p class="footer__sinopse-paragraph">
+                        Contos de personagens clássicos como Drácula, Frankenstein e Dorian Gray estão reunidos nesta série de terror ambientada nas ruas da Londres vitoriana.
+                      </p>
+                   </div>
+                </div>
             </div>
         </footer>
     </section>

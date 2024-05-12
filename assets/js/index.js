@@ -39,7 +39,8 @@ class BackgroundAnimation {
 
 (async () => {
     const movie = await getMovieAndEpisodes()
-    const menu = new Menu()
+    const menu = new Menu('.aside__bottom-area')
+    const menuFooter = new Menu('.footer__content--tabitem')
     new BackgroundAnimation(movie._images)
 })()
 

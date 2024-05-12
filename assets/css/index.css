@@ -113,6 +113,10 @@ table {
   width: 100%;
 }
 
+.mt-20 {
+  margin-top: 20px;
+}
+
 .movie__content {
   background-repeat: no-repeat;
   background-size: cover;
@@ -223,7 +227,7 @@ table {
 
 .movie__content-footer {
   background-color: #15161A;
-  height: 200px;
+  height: 30%;
 }
 
 .footer__content {
@@ -232,19 +236,23 @@ table {
 }
 
 .footer__content-info {
-  padding-top: 40px;
   position: relative;
+}
+.footer__content-info img {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
 }
 
 .tabitem__footer-title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   color: #fff;
 }
 
 .footer__content--tabitem {
-  padding: 0px 0px 25px 0px;
-  margin-right: 30px;
+  padding: 0px 0px 10px 0px;
+  margin-right: 98px;
   z-index: 2;
   cursor: pointer;
 }
@@ -260,6 +268,36 @@ table {
   border-radius: 10px;
   position: absolute;
   bottom: 0;
+}
+
+.content__general {
+  width: 100%;
+  max-width: 91%;
+  padding-bottom: 40px;
+}
+
+.content__emoji {
+  margin-right: 40px;
+  margin-top: 30px;
+}
+
+.emoji__footer {
+  margin-bottom: 10px;
+}
+
+.footer__sinopse {
+  flex: 1;
+}
+
+.footer__sinopse-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.footer__sinopse-paragraph {
+  font-weight: 600;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=index.css.map */
