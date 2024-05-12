@@ -99,6 +99,7 @@
     border-bottom: 0.5px solid #898D90;
     cursor: pointer;
     transition: color 0.5s linear;
+    overflow: hidden;
 }
 
 .aside__episode--item:hover .episode__title {
@@ -113,3 +114,33 @@
 }
 
 
+.episode__item-details {
+    // position: absolute;
+    margin-top: 10px;
+    max-width: 92%;
+}
+
+.episode__item-figure {
+    position: relative;
+    img {
+        border-radius: 8px;
+        width: 100%;
+    }
+}
+
+.episode__progress  {
+    width: 90%;
+    height: 2px;
+    background-color: #dddd;
+    border-radius: 10px;
+}
+.item__area-progress {
+    position: absolute;
+    bottom: 20px;
+}
+
+.progress {
+    background-color: #19af4f;
+    width: 34%;
+    height: 2px;
+}
