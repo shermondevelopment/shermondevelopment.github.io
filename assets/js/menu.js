@@ -2,8 +2,8 @@ class Menu {
 
     constructor(movie) {
         this.menuOptions = null
-        this.optionsEpisodes = document.querySelectorAll('.aside__episode--item')
-        this.seasonCehcked = '1'
+        this.optionsEpisodes = null
+        this.seasonChecked = 1
         this.movie = movie;
         this.init()
     }
@@ -13,18 +13,19 @@ class Menu {
     */
     addFocusedItemMenu() {      
         this.menuOptions =  document.querySelectorAll('.aside__bottom-area')
-        console.log(this.menuOptions)
         this.menuOptions.forEach((itemMenu) => {
             itemMenu.addEventListener('click', () => {
                this.removeItemFocudesMenu()
                itemMenu.classList.add('focused')
-               this.seasonCehcked = itemMenu.dataset.season;
+               this.seasonChecked = itemMenu.dataset.season;
+               this.renderEpisodeOfSeason()
             })
         })
     }
 
     openDetailsEpisode() {
-        this.optionsEpisodes.forEach((episodeItem, indice) => {
+        this.optionsEpisodes = document.querySelectorAll('.aside__episode--item')
+        this.optionsEpisodes.forEach((episodeItem) => {
             episodeItem.addEventListener('click', () => {
                 this.removeFocusEpisodeItem()
                 episodeItem.classList.toggle('opened')
@@ -42,6 +43,49 @@ class Menu {
             `
         }
         this.addFocusedItemMenu()
+    }
+
+    renderEpisodeOfSeason() {
+
+        
+        const episdoeOfSeason = this.movie._episodes.filter( (item) => item.seasonNumber === Number(this.seasonChecked))
+
+        const elementEpisodes = document.querySelector('.content__aside-episode');
+
+
+        elementEpisodes.innerHTML = '';
+
+        episdoeOfSeason.forEach((episodeItem, indice)  => {
+            elementEpisodes.innerHTML += `
+            <div class="aside__episode--item  flex justify-between items-between flex-col">
+                <div class="flex justify-between items-center">
+                    <h3 class="episode__title">
+                        ${episodeItem.episodeNumber} ${episodeItem.title}
+                    </h3>
+                    <img src="./assets/icons/play-small-player-w.svg" />
+                </div>
+
+                <div class="episode__item-details flex flex-col">
+                    <div class="episode__item-figure">
+                    <img  src="${episodeItem.image}" />
+                    <div class="item__area-progress w-full flex justify-center">
+                        <div class="episode__progress">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="episode__item-details--paragraph">
+                        <p>
+                            ${episodeItem.synopsis}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            `
+        })
+
+        this.openDetailsEpisode()
+
     }
 
     /*
@@ -68,7 +112,7 @@ class Menu {
     */
     init() {
         this.renderSeasonInScreen()
-        this.openDetailsEpisode()
+        this.renderEpisodeOfSeason()
     }
 
 }
