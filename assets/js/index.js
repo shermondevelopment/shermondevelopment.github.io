@@ -7,7 +7,16 @@ const getMovieAndEpisodes = async () => {
     const service = new Service()
     const moviesFetch = await service.getMovie('movie')
     const episodesFetch = await service.getEpisodes('episodes')
-    return new Movie(moviesFetch.cast, moviesFetch.genres, moviesFetch.images, moviesFetch.synopsis, moviesFetch.title, moviesFetch.year, episodesFetch)
+    return new Movie(
+        moviesFetch.cast, 
+        moviesFetch.genres, 
+        moviesFetch.images, 
+        moviesFetch.synopsis, 
+        moviesFetch.title,
+        moviesFetch.year, 
+        episodesFetch,
+        moviesFetch.seasons
+    )
 }
 
 class BackgroundAnimation {
@@ -39,8 +48,8 @@ class BackgroundAnimation {
 
 (async () => {
     const movie = await getMovieAndEpisodes()
-    const menu = new Menu('.aside__bottom-area')
-    const menuFooter = new Menu('.footer__content--tabitem')
+    const menu = new Menu(movie)
+    // const menuFooter = new Menu('.footer__content--tabitem')
     new BackgroundAnimation(movie._images)
 })()
 

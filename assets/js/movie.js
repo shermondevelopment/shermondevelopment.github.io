@@ -1,5 +1,5 @@
 class Movie {
-    constructor(cast, genres, images, synopsis, title, year, episodes) {
+    constructor(cast, genres, images, synopsis, title, year, episodes, seasons) {
         this._cast = cast
         this._genres = genres
         this._images = images
@@ -7,6 +7,7 @@ class Movie {
         this._title = title
         this._year = year
         this._episodes = episodes
+        this.seasons = seasons
     }
 
     get cast() {
