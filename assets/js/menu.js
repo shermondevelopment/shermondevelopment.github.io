@@ -2,6 +2,7 @@ class Menu {
 
     constructor(identifyElement) {
         this.menuOptions = document.querySelectorAll(identifyElement)
+        this.optionsEpisodes = document.querySelectorAll('.aside__episode--item')
         this.seasonCehcked = '1'
         this.init()
     }
@@ -19,6 +20,15 @@ class Menu {
         })
     }
 
+    openDetailsEpisode() {
+        this.optionsEpisodes.forEach((episodeItem, indice) => {
+            episodeItem.addEventListener('click', () => {
+                this.removeFocusEpisodeItem()
+                episodeItem.classList.toggle('opened')
+            })
+        })
+    }
+
     /*
     * add click event to all menu options
     */
@@ -29,10 +39,21 @@ class Menu {
     }
 
     /*
+     * remove episode screen details
+    */
+
+    removeFocusEpisodeItem() {
+        this.optionsEpisodes.forEach((itemEpisode) => {
+            itemEpisode.classList.remove('opened')
+        })
+    }
+
+    /*
     * init menu
     */
     init() {
         this.addFocusedItemMenu()
+        this.openDetailsEpisode()
     }
 
 }
