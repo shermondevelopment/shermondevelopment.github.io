@@ -1,6 +1,7 @@
 import Movie from './movie.js'
 import Service from './service.js'
 import Menu from './menu.js'
+import Footer from './footer.js';
 import AnimationSlide from './animation.js'
 
 
@@ -26,5 +27,6 @@ const getMovieAndEpisodes = async () => {
     const movie = await getMovieAndEpisodes()
     new Menu(movie)
     new AnimationSlide(movie._images)
+    new Footer(movie._synopsis)
 })()
 
