@@ -1,6 +1,7 @@
 import Movie from './movie.js'
 import Service from './service.js'
 import Menu from './menu.js'
+import AnimationSlide from './animation.js'
 
 
 const getMovieAndEpisodes = async () => {
@@ -19,37 +20,11 @@ const getMovieAndEpisodes = async () => {
     )
 }
 
-class BackgroundAnimation {
-    
-
-    constructor(images) {
-        this.index = 0
-        this.images = images
-        this.element = document.querySelector('.movie__content')
-        this.init()
-    }
-
-    changeImages() {
-        this.element.style.backgroundImage = `url(${this.images[this.index]})`;
-        this.index = (this.index + 1) % this.images.length; 
-    }
-
-    startAnimation() {
-        this.element.style.backgroundImage = `url(${this.images[this.index]})`
-        setInterval(this.changeImages.bind(this), 15000)
-    }
-
-    init() {
-        this.startAnimation()
-    }
-
-}
 
 
 (async () => {
     const movie = await getMovieAndEpisodes()
-    const menu = new Menu(movie)
-    // const menuFooter = new Menu('.footer__content--tabitem')
-    new BackgroundAnimation(movie._images)
+    new Menu(movie)
+    new AnimationSlide(movie._images)
 })()
 
