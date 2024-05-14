@@ -74,3 +74,35 @@
     font-weight: 600;
     font-size: 16px;
 }
+
+.content__cast {
+    max-width: 91%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: none;
+}
+
+.content__cast-card {
+    width: 200px;
+    height: 100px;
+    background: #1E1E1E;
+    margin-right: 10px;
+}
+.elenco__firstname {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ccc;
+}
+
+.elenco__lastname {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.content__prem {
+    height: 100px;
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

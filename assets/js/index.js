@@ -22,11 +22,19 @@ const getMovieAndEpisodes = async () => {
 }
 
 
+const loadingScreen = async  () => {
+    const loadingElement = document.querySelector('.loading__movie')
+    try {
+        const movie = await getMovieAndEpisodes()
+        new Menu(movie)
+        new AnimationSlide(movie._images)
+        new Footer(movie._synopsis, movie._cast)
+    } finally {
+        loadingElement.style.display = 'none'
+    }
+}
 
 (async () => {
-    const movie = await getMovieAndEpisodes()
-    new Menu(movie)
-    new AnimationSlide(movie._images)
-    new Footer(movie._synopsis)
+    await loadingScreen()
 })()
 
